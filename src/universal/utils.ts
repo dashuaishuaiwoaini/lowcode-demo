@@ -243,6 +243,7 @@ const setProjectSchemaToLocalStorage = (scenarioName: string) => {
     console.error('scenarioName is required!');
     return;
   }
+
   window.localStorage.setItem(
     getLSName(scenarioName),
     JSON.stringify(project.exportSchema(TransformStage.Save))

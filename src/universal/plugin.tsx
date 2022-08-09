@@ -45,41 +45,14 @@ export default async function registerPlugins() {
 
   await plugins.register(deleteHiddenTransducer);
 
-  // plugin API 见 https://lowcode-engine.cn/docV2/ibh9fh
-  SchemaPlugin.pluginName = 'SchemaPlugin';
-  await plugins.register(SchemaPlugin);
 
-  SimulatorResizer.pluginName = 'SimulatorResizer';
-  plugins.register(SimulatorResizer);
-
-  const editorInit = (ctx: ILowCodePluginContext) => {
+  /**
+   * 顶部区域
+   */
+  // 注册logo
+  const logoPlugin = (ctx: ILowCodePluginContext) => {
     return {
-      name: 'editor-init',
-      async init() {
-        // 修改面包屑组件的分隔符属性setter
-        // const assets = await (
-        //   await fetch(
-        //     `https://alifd.alicdn.com/npm/@alilc/lowcode-materials/build/lowcode/assets-prod.json`
-        //   )
-        // ).json();
-        // 设置物料描述
-        const { material, project } = ctx;
-
-        await material.setAssets(await injectAssets(assets));
-
-        const schema = await getPageSchema();
-
-        // 加载 schema
-        project.openDocument(schema);
-      },
-    };
-  }
-  editorInit.pluginName = 'editorInit';
-  await plugins.register(editorInit);
-
-  const builtinPluginRegistry = (ctx: ILowCodePluginContext) => {
-    return {
-      name: 'builtin-plugin-registry',
+      name: 'logo-plugin',
       async init() {
         const { skeleton } = ctx;
         // 注册 logo 面板
@@ -96,69 +69,16 @@ export default async function registerPlugins() {
             align: 'left',
           },
         });
-
-        // 注册组件面板
-        const componentsPane = skeleton.add({
-          area: 'leftArea',
-          type: 'PanelDock',
-          name: 'componentsPane',
-          content: ComponentsPane,
-          contentProps: {},
-          props: {
-            align: 'top',
-            icon: 'zujianku',
-            description: '组件库',
-          },
-        });
-        componentsPane?.disable?.();
-        project.onSimulatorRendererReady(() => {
-          componentsPane?.enable?.();
-        })
       },
     };
   }
-  builtinPluginRegistry.pluginName = 'builtinPluginRegistry';
-  await plugins.register(builtinPluginRegistry);
-
-  // 设置内置 setter 和事件绑定、插件绑定面板
-  const setterRegistry = (ctx: ILowCodePluginContext) => {
-    const { setterMap, pluginMap } = AliLowCodeEngineExt;
-    return {
-      name: 'ext-setters-registry',
-      async init() {
-        const { setters, skeleton } = ctx;
-        // 注册setterMap
-        setters.registerSetter(setterMap);
-        // 注册插件
-        // 注册事件绑定面板
-        skeleton.add({
-          area: 'centerArea',
-          type: 'Widget',
-          content: pluginMap.EventBindDialog,
-          name: 'eventBindDialog',
-          props: {},
-        });
-
-        // 注册变量绑定面板
-        skeleton.add({
-          area: 'centerArea',
-          type: 'Widget',
-          content: pluginMap.VariableBindDialog,
-          name: 'variableBindDialog',
-          props: {},
-        });
-      },
-    };
-  }
-  setterRegistry.pluginName = 'setterRegistry';
-  await plugins.register(setterRegistry);
+  logoPlugin.pluginName = 'logoPlugin';
+  await plugins.register(logoPlugin);
 
   // 注册回退/前进
   await plugins.register(UndoRedoPlugin);
 
-  // 注册中英文切换
-  await plugins.register(ZhEnPlugin);
-
+  // 注册异步加载资源
   const loadAssetsSample = (ctx: ILowCodePluginContext) => {
     return {
       name: 'loadAssetsSample',
@@ -185,7 +105,7 @@ export default async function registerPlugins() {
   loadAssetsSample.pluginName = 'loadAssetsSample';
   await plugins.register(loadAssetsSample);
 
-  // 注册保存面板
+  // 注册保存、重置面板
   const saveSample = (ctx: ILowCodePluginContext) => {
     return {
       name: 'saveSample',
@@ -228,16 +148,11 @@ export default async function registerPlugins() {
   saveSample.pluginName = 'saveSample';
   await plugins.register(saveSample);
 
-  DataSourcePanePlugin.pluginName = 'DataSourcePane';
-  await plugins.register(DataSourcePanePlugin);
-
-  CodeEditor.pluginName = 'CodeEditor';
-  await plugins.register(CodeEditor);
-
   // 注册出码插件
   CodeGenPlugin.pluginName = 'CodeGenPlugin';
   await plugins.register(CodeGenPlugin);
 
+  // 注册预览插件
   const previewSample = (ctx: ILowCodePluginContext) => {
     return {
       name: 'previewSample',
@@ -261,7 +176,120 @@ export default async function registerPlugins() {
   };
   previewSample.pluginName = 'previewSample';
   await plugins.register(previewSample);
+ 
 
+  /**
+   * 左侧plugin区域
+   * */ 
+
+  // 注册组件面板
+  const ComponentsPlugin = (ctx: ILowCodePluginContext) => {
+    return {
+      name: 'components-panel',
+      async init() {
+        const { skeleton } = ctx;
+        const componentsPane = skeleton.add({
+          area: 'leftArea',
+          type: 'PanelDock',
+          name: 'componentsPane',
+          content: ComponentsPane,
+          contentProps: {},
+          props: {
+            align: 'top',
+            icon: 'zujianku',
+            description: '组件库',
+          },
+        });
+        componentsPane?.disable?.();
+        project.onSimulatorRendererReady(() => {
+          componentsPane?.enable?.();
+        })
+      },
+    };
+  }
+  ComponentsPlugin.pluginName = 'ComponentsPane';
+  await plugins.register(ComponentsPlugin);
+
+  // 注册数据源面板
+  DataSourcePanePlugin.pluginName = 'DataSourcePane';
+  await plugins.register(DataSourcePanePlugin);
+
+  // 注册js编辑面板
+  CodeEditor.pluginName = 'CodeEditor';
+  await plugins.register(CodeEditor);
+
+  // plugin API 见 https://lowcode-engine.cn/docV2/ibh9fh
+  // 注册schema面板
+  SchemaPlugin.pluginName = 'SchemaPlugin';
+  await plugins.register(SchemaPlugin);
+
+  // TODO 这个不知道注册什么功能
+  SimulatorResizer.pluginName = 'SimulatorResizer';
+  plugins.register(SimulatorResizer);
+
+  // 注册中英文切换
+  await plugins.register(ZhEnPlugin);
+
+  // 初始化画布 & 注册资产包(assets + schema)
+  const editorInit = (ctx: ILowCodePluginContext) => {
+    return {
+      name: 'editor-init',
+      async init() {
+        // 修改面包屑组件的分隔符属性setter
+        // const assets = await (
+        //   await fetch(
+        //     `https://alifd.alicdn.com/npm/@alilc/lowcode-materials/build/lowcode/assets-prod.json`
+        //   )
+        // ).json();
+        // 设置物料描述
+        const { material, project } = ctx;
+
+        await material.setAssets(await injectAssets(assets));
+
+        const schema = await getPageSchema();
+
+        // 加载 schema
+        project.openDocument(schema);
+      },
+    };
+  }
+  editorInit.pluginName = 'editorInit';
+  await plugins.register(editorInit);
+
+  // 设置内置 setter 和事件绑定、插件绑定面板
+  const setterRegistry = (ctx: ILowCodePluginContext) => {
+    const { setterMap, pluginMap } = AliLowCodeEngineExt;
+    return {
+      name: 'ext-setters-registry',
+      async init() {
+        const { setters, skeleton } = ctx;
+        // 注册setterMap
+        setters.registerSetter(setterMap);
+        // 注册插件
+        // 注册事件绑定面板
+        skeleton.add({
+          area: 'centerArea',
+          type: 'Widget',
+          content: pluginMap.EventBindDialog,
+          name: 'eventBindDialog',
+          props: {},
+        });
+
+        // 注册变量绑定面板
+        skeleton.add({
+          area: 'centerArea',
+          type: 'Widget',
+          content: pluginMap.VariableBindDialog,
+          name: 'variableBindDialog',
+          props: {},
+        });
+      },
+    };
+  }
+  setterRegistry.pluginName = 'setterRegistry';
+  await plugins.register(setterRegistry);
+
+  // TODO 
   const customSetter = (ctx: ILowCodePluginContext) => {
     return {
       name: '___registerCustomSetter___',

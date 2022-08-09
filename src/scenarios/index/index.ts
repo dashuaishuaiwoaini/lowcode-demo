@@ -18,6 +18,7 @@ preference.set('DataSourcePane', {
 });
 
 (async function main() {
+  // 注册切换场景插件
   await plugins.register(scenarioSwitcher);
   await registerPlugins();
 
