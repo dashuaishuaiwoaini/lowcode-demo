@@ -230,7 +230,7 @@ export default async function registerPlugins() {
   // 注册中英文切换
   await plugins.register(ZhEnPlugin);
 
-  // 初始化画布 & 注册资产包(assets + schema)
+  // 初始化画布schema & 注册资产包assets
   const editorInit = (ctx: ILowCodePluginContext) => {
     return {
       name: 'editor-init',
