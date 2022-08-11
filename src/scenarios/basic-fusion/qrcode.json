@@ -1,0 +1,107 @@
+{
+  "version": "1.1.0",
+  "packages": [
+    {
+      "package": "lodash",
+      "id": "lodash",
+      "library": "_",
+      "urls": [
+        "https://g.alicdn.com/platform/c/lodash/4.6.1/lodash.min.js"
+      ],
+      "external": true
+    },
+    {
+      "package": "moment",
+      "id": "moment",
+      "library": "moment",
+      "urls": [
+        "https://g.alicdn.com/mylib/moment/2.24.0/min/moment.min.js"
+      ],
+      "external": true
+    },
+    {
+      "package": "@alifd/next",
+      "id": "@alifd/next",
+      "library": "Next",
+      "urls": [
+        "https://g.alicdn.com/code/lib/alifd__next/1.24.18/next.min.css",
+        "https://g.alicdn.com/code/lib/alifd__next/1.24.18/next-with-locales.min.js"
+      ],
+      "external": true
+    },
+    {
+      "id": "qrcode.react",
+      "package": "qrcode.react",
+      "library": "Qrcode.react",
+      "version": "3.1.0",
+      "advancedUrls": {
+        "default": [
+          "https://g.alicdn.com/legao-comp/web_bundle_0724/qrcode.react/3.1.0/main.4b39f56.js"
+        ]
+      },
+      "urls": [
+        "https://g.alicdn.com/legao-comp/web_bundle_0724/qrcode.react/3.1.0/main.4b39f56.js"
+      ]
+    }
+  ],
+  "components": [
+    {
+      "componentId": "7314kwl68h30",
+      "devMode": "procode",
+      "npm": {
+        "package": "qrcode.react",
+        "version": "3.1.0",
+        "exportName": "default",
+        "subName": "",
+        "main": "lib/index.js",
+        "destructuring": true
+      },
+      "componentName": "ReactQrcode",
+      "title": "react-qrcode",
+      "category": "其他",
+      "configure": {
+        "props": [],
+        "component": {
+          "isContainer": false,
+          "isModal": false
+        },
+        "supports": {
+          "style": false
+        }
+      },
+      "experimental": {
+        "callbacks": {}
+      },
+      "snippets": [
+        {
+          "title": "react-qrcode",
+          "schema": {
+            "componentName": "ReactQrcode",
+            "props": {}
+          }
+        }
+      ],
+      "reference": {
+        "package": "qrcode.react",
+        "version": "3.1.0",
+        "exportName": "default",
+        "subName": "",
+        "main": "lib/index.js",
+        "destructuring": true,
+        "id": "qrcode.react"
+      }
+    }
+  ],
+  "setters": [],
+  "plugins": [],
+  "extConfig": {
+    "vcComponents": [],
+    "runtimeUtils": [],
+    "visionPlugins": [],
+    "lowCodeComponentsConfig": {}
+  },
+  "sort": {
+    "categoryList": [],
+    "groupList": []
+  }
+}
