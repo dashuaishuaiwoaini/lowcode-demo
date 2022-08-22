@@ -37,7 +37,6 @@ import assets from './assets.json'
 import { registerRefProp } from 'src/sample-plugins/set-ref-prop';
 
 export default async function registerPlugins() {
-  await plugins.register(ManualPlugin);
 
   await plugins.register(Inject);
 
@@ -74,6 +73,10 @@ export default async function registerPlugins() {
   }
   logoPlugin.pluginName = 'logoPlugin';
   await plugins.register(logoPlugin);
+
+  // 注册自适应
+  SimulatorResizer.pluginName = 'SimulatorResizer';
+  plugins.register(SimulatorResizer);
 
   // 注册回退/前进
   await plugins.register(UndoRedoPlugin);
@@ -223,9 +226,9 @@ export default async function registerPlugins() {
   SchemaPlugin.pluginName = 'SchemaPlugin';
   await plugins.register(SchemaPlugin);
 
-  // TODO 这个不知道注册什么功能
-  SimulatorResizer.pluginName = 'SimulatorResizer';
-  plugins.register(SimulatorResizer);
+  // 注册如何使用面板
+  await plugins.register(ManualPlugin);
+ 
 
   // 注册中英文切换
   await plugins.register(ZhEnPlugin);
