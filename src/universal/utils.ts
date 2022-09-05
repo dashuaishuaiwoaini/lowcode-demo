@@ -272,12 +272,12 @@ export const getPackagesFromLocalStorage = (scenarioName: string) => {
 
 export const getPageSchema = async (scenarioName: string = 'index') => {
   const pageSchema = getProjectSchemaFromLocalStorage(scenarioName).componentsTree?.[0]
-
   if (pageSchema) {
     return pageSchema;
   }
 
-  return await request('./schema.json');
+  // return await request('./schema.json');
+  return require('./schema.json');
 };
 
 function request(
