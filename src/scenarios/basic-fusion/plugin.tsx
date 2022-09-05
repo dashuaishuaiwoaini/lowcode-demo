@@ -34,6 +34,7 @@ import {
   getProjectSchemaFromLocalStorage,
 } from '../../universal/utils';
 import assets from './assets.json';
+// import assets from './customer-assets.json';
 import schema from './schema.json';
 
 export default async function registerPlugins() {
