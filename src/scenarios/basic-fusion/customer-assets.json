@@ -10,188 +10,1532 @@
     },
     {
       "package": "lodash",
-      "library": "_",
-      "urls": [
-        "https://g.alicdn.com/platform/c/lodash/4.6.1/lodash.min.js"
-      ]
-    },
-    {
-      "package": "lodash",
-      "id": "lodash",
-      "library": "_",
       "urls": [
         "https://g.alicdn.com/platform/c/lodash/4.6.1/lodash.min.js"
       ],
-      "external": true
+      "library": "lodash"
     },
     {
-      "package": "moment",
-      "id": "moment",
-      "library": "moment",
-      "urls": [
-        "https://g.alicdn.com/mylib/moment/2.24.0/min/moment.min.js"
-      ],
-      "external": true
-    },
-    {
+      "title": "fusion组件库",
       "package": "@alifd/next",
-      "id": "@alifd/next",
-      "library": "Next",
+      "version": "1.23.0",
       "urls": [
-        "https://g.alicdn.com/code/lib/alifd__next/1.24.18/next.min.css",
-        "https://g.alicdn.com/code/lib/alifd__next/1.24.18/next-with-locales.min.js"
+        "https://g.alicdn.com/code/lib/alifd__next/1.23.18/next.min.css",
+        "https://g.alicdn.com/code/lib/alifd__next/1.23.18/next-with-locales.min.js"
       ],
-      "external": true
+      "library": "Next"
     },
     {
-      "id": "react-color",
-      "package": "react-color",
-      "library": "ReactColor",
-      "version": "2.19.3",
-      "advancedUrls": {
-        "default": [
-          "https://g.alicdn.com/legao-comp/web_bundle_0724/react-color/2.19.3/main.a0da931.js"
-        ]
-      },
+      "title": "NextTable",
+      "package": "NextTable",
+      "version": "1.0.1",
       "urls": [
-        "https://g.alicdn.com/legao-comp/web_bundle_0724/react-color/2.19.3/main.a0da931.js"
-      ]
-    },
-    {
-      "package": "lodash",
-      "id": "lodash",
-      "library": "_",
-      "urls": [
-        "https://g.alicdn.com/platform/c/lodash/4.6.1/lodash.min.js"
+        "https://g.alicdn.com/fusion-platform/pro-table/1.0.1/next-table.js",
+        "https://g.alicdn.com/fusion-platform/pro-table/1.0.1/next-table.css"
       ],
-      "external": true
+      "library": "NextTable"
     },
     {
-      "package": "moment",
-      "id": "moment",
-      "library": "moment",
+      "title": "AliLowCodeComponents",
+      "package": "@alifd/ali-lowcode-components",
+      "version": "latest",
       "urls": [
-        "https://g.alicdn.com/mylib/moment/2.24.0/min/moment.min.js"
+        "https://gw.alipayobjects.com/os/lib/alifd/ali-lowcode-components/0.1.4/dist/ali-lowcode-components.js",
+        "https://gw.alipayobjects.com/os/lib/alifd/ali-lowcode-components/0.1.4/dist/ali-lowcode-components.css"
       ],
-      "external": true
+      "library": "AliLowCodeComponents"
     },
     {
-      "package": "@alifd/next",
-      "id": "@alifd/next",
-      "library": "Next",
+      "title": "BizCharts",
+      "package": "bizcharts",
+      "version": "4.1.11",
       "urls": [
-        "https://g.alicdn.com/code/lib/alifd__next/1.24.18/next.min.css",
-        "https://g.alicdn.com/code/lib/alifd__next/1.24.18/next-with-locales.min.js"
+        "https://g.alicdn.com/code/lib/bizcharts/4.1.11/BizCharts.min.js"
       ],
-      "external": true
+      "library": "BizCharts"
     },
     {
-      "id": "qrcode.react",
-      "package": "qrcode.react",
-      "library": "Qrcode.react",
-      "version": "3.1.0",
-      "advancedUrls": {
-        "default": [
-          "https://g.alicdn.com/legao-comp/web_bundle_0724/qrcode.react/3.1.0/main.4b39f56.js"
-        ]
-      },
+      "title": "Container",
+      "package": "@alife/container",
+      "version": "0.3.7",
       "urls": [
-        "https://g.alicdn.com/legao-comp/web_bundle_0724/qrcode.react/3.1.0/main.4b39f56.js"
-      ]
+        "https://g.alicdn.com/fusion-design/auto-layout/0.3.7/dist/container.css",
+        "https://g.alicdn.com/fusion-design/auto-layout/0.3.7/dist/container.js"
+      ],
+      "library": "Container"
     }
   ],
   "components": [
     {
-      "componentId": "7wzsuq95u0c0",
-      "devMode": "procode",
+      "componentName": "Image",
+      "title": "图片",
       "npm": {
-        "package": "react-color",
-        "version": "2.19.3",
-        "exportName": "default",
-        "subName": "",
-        "main": "lib/index.js",
-        "destructuring": true
+        "package": "@alifd/ali-lowcode-components",
+        "version": "latest",
+        "exportName": "Image",
+        "main": "",
+        "destructuring": true,
+        "subName": ""
       },
-      "componentName": "ReactColor",
-      "title": "react-color",
-      "category": "其他",
-      "configure": {
-        "props": [],
-        "component": {
-          "isContainer": false,
-          "isModal": false
+      "props": [
+        {
+          "name": "src",
+          "title": {
+            "label": {
+              "type": "i18n",
+              "zh_CN": "图片链接",
+              "en_US": "Image Address"
+            },
+            "tip": {
+              "type": "i18n",
+              "zh_CN": "属性: src | 说明: 图片链接",
+              "en_US": "prop: src | description: image address"
+            }
+          },
+          "propType": "string",
+          "defaultValue": "https://img.alicdn.com/tps/TB16TQvOXXXXXbiaFXXXXXXXXXX-120-120.svg"
         },
-        "supports": {
-          "style": false
+        {
+          "name": "title",
+          "title": {
+            "label": {
+              "type": "i18n",
+              "zh_CN": "标题",
+              "en_US": "Title"
+            }
+          },
+          "propType": "string"
+        },
+        {
+          "name": "alt",
+          "title": {
+            "label": {
+              "type": "i18n",
+              "zh_CN": "代替文本",
+              "en_US": "Alt"
+            }
+          },
+          "propType": "string"
+        },
+        {
+          "name": "style",
+          "propType": "object"
         }
-      },
-      "experimental": {
-        "callbacks": {}
-      },
+      ],
       "snippets": [
         {
-          "title": "react-color",
+          "title": "图片",
+          "screenshot": "https://img.alicdn.com/tfs/TB10nEur.Y1gK0jSZFCXXcwqXXa-234-230.png",
           "schema": {
-            "componentName": "ReactColor",
-            "props": {}
+            "title": "图片",
+            "componentName": "Image",
+            "props": {
+              "src": "https://img.alicdn.com/tps/TB16TQvOXXXXXbiaFXXXXXXXXXX-120-120.svg"
+            }
           }
         }
       ],
-      "reference": {
-        "package": "react-color",
-        "version": "2.19.3",
-        "exportName": "default",
-        "subName": "",
-        "main": "lib/index.js",
-        "destructuring": true,
-        "id": "react-color"
-      }
+      "icon": "",
+      "category": "常用"
     },
     {
-      "componentId": "7314kwl68h30",
+      "componentName": "Link",
       "devMode": "procode",
+      "title": "链接",
       "npm": {
-        "package": "qrcode.react",
-        "version": "3.1.0",
-        "exportName": "default",
-        "subName": "",
-        "main": "lib/index.js",
-        "destructuring": true
+        "package": "@alifd/ali-lowcode-components",
+        "version": "latest",
+        "exportName": "Link",
+        "main": "",
+        "destructuring": true,
+        "subName": ""
       },
-      "componentName": "ReactQrcode",
-      "title": "react-qrcode",
-      "category": "其他",
+      "category": "常用",
       "configure": {
-        "props": [],
-        "component": {
-          "isContainer": false,
-          "isModal": false
-        },
         "supports": {
-          "style": false
-        }
+          "style": true,
+          "events": [
+            "onClick"
+          ]
+        },
+        "component": {
+          "isContainer": true
+        },
+        "props": [
+          {
+            "name": "children",
+            "title": {
+              "label": {
+                "type": "i18n",
+                "zh_CN": "链接文案",
+                "en_US": "Text"
+              },
+              "tip": {
+                "type": "i18n",
+                "zh_CN": "属性：children | 说明：超链接文案",
+                "en_US": "prop: children | description: text of the link"
+              }
+            },
+            "setter": "StringSetter",
+            "defaultValue": "这是一个超链接"
+          },
+          {
+            "name": "linkType",
+            "title": "跳转类型",
+            "condition": {
+              "type": "JSFunction",
+              "value": "condition(target) {\n          const _pages_ = target.getProps().getPropValue(\"_pages_\");\n          console.log('_pages_: ', _pages_);\n          return !!_pages_;\n        }"
+            },
+            "defaultValue": "page",
+            "setter": {
+              "componentName": "RadioGroupSetter",
+              "props": {
+                "options": [
+                  {
+                    "value": "page",
+                    "title": "内部页面"
+                  },
+                  {
+                    "value": "link",
+                    "title": "外部链接"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "name": "_redirect_url",
+            "title": "跳转页面",
+            "extraProps": {
+              "getValue": {
+                "type": "JSFunction",
+                "value": "(target, value) => {\n            return target.getProps().getPropValue('href');\n          }"
+              },
+              "setValue": {
+                "type": "JSFunction",
+                "value": "(target, value) => {\n            return target.getProps().setPropValue('href', value);\n          }"
+              }
+            },
+            "setter": {
+              "type": "JSFunction",
+              "value": "(target) => {\n          const data = ((target.getProps().getPropValue('_pages_') || {}).content || []).map(item => {\n            return {\n              title: item.title.zh_CN,\n              value: `#/${item.relateUuid}`,\n            };\n          });\n          return {\n            componentName: 'SelectSetter',\n            props: {\n              options: data\n            },\n          };\n        }"
+            },
+            "condition": {
+              "type": "JSFunction",
+              "value": "condition(target) {\n          return target.getProps().getPropValue(\"linkType\") === 'page';\n        }"
+            }
+          },
+          {
+            "name": "href",
+            "title": {
+              "label": {
+                "type": "i18n",
+                "zh_CN": "跳转链接",
+                "en_US": "Link"
+              },
+              "tip": {
+                "type": "i18n",
+                "zh_CN": "属性：href | 说明：超链接地址",
+                "en_US": "prop: href | description: link address"
+              }
+            },
+            "setter": "StringSetter",
+            "condition": {
+              "type": "JSFunction",
+              "value": "condition(target) {\n          return target.getProps().getPropValue(\"linkType\") === 'link';\n        }"
+            }
+          },
+          {
+            "name": "target",
+            "title": {
+              "label": {
+                "type": "i18n",
+                "zh_CN": "页面目标",
+                "en_US": "Target"
+              },
+              "tip": {
+                "type": "i18n",
+                "zh_CN": "属性：target | 说明：跳转页面目标",
+                "en_US": "prop: target | description: target of new page"
+              }
+            },
+            "setter": {
+              "componentName": "RadioGroupSetter",
+              "props": {
+                "options": [
+                  {
+                    "value": "_self",
+                    "title": "当前页面"
+                  },
+                  {
+                    "value": "_blank",
+                    "title": "新开页面"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "name": "_pages_",
+            "condition": {
+              "type": "JSFunction",
+              "value": "() => false"
+            }
+          }
+        ]
       },
       "experimental": {
-        "callbacks": {}
+        "initials": [
+          {
+            "name": "linkType",
+            "initial": {
+              "type": "JSFunction",
+              "value": "() => 'link'"
+            }
+          },
+          {
+            "name": "_pages_",
+            "initial": {
+              "type": "JSFunction",
+              "value": "(target) => {\n          let url = `/uipass/query/formnav/getFormNavigationListByOrder.json${window.location.search}`\n          if (['localhost', '127.0.0.1', 'a7343369-3834-4e55-9f69-e071f489f979-3333.cloud-ide-router.alibaba-inc.com'].includes(window.location.hostname)) {\n            url = 'mock-pages.json';\n          }\n          (AliLowCodeEngine || VisualEngine).editor.utils.get(url)\n            .then((response) => {\n              target.getProps().setPropValue('_pages_', response);\n            });\n        }"
+            }
+          }
+        ],
+        "filters": [],
+        "autoruns": []
       },
       "snippets": [
         {
-          "title": "react-qrcode",
+          "title": "链接",
+          "screenshot": "https://img.alicdn.com/tfs/TB15DZVReL2gK0jSZFmXXc7iXXa-200-200.svg",
           "schema": {
-            "componentName": "ReactQrcode",
-            "props": {}
+            "componentName": "Link",
+            "title": "链接",
+            "props": {
+              "href": "https://fusion.design",
+              "target": "_blank",
+              "children": "这是一个超链接"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "componentName": "Calendar",
+      "title": "日历",
+      "docUrl": "",
+      "screenshot": "",
+      "npm": {
+        "package": "@alifd/next",
+        "version": "1.23.x",
+        "exportName": "Calendar",
+        "main": "",
+        "destructuring": true,
+        "subName": ""
+      },
+      "props": [
+        {
+          "name": "prefix",
+          "propType": "string",
+          "defaultValue": "next-"
+        },
+        {
+          "name": "rtl",
+          "propType": "bool",
+          "defaultValue": false
+        },
+        {
+          "name": "defaultValue",
+          "propType": {
+            "type": "instanceOf",
+            "value": "custom"
+          },
+          "description": "默认选中的日期（moment 对象）"
+        },
+        {
+          "name": "value",
+          "propType": {
+            "type": "instanceOf",
+            "value": "custom"
+          },
+          "description": "选中的日期值 (moment 对象)"
+        },
+        {
+          "name": "modes",
+          "propType": {
+            "type": "instanceOf",
+            "value": "array"
+          }
+        },
+        {
+          "name": "disableChangeMode",
+          "propType": "bool",
+          "defaultValue": false
+        },
+        {
+          "name": "format",
+          "propType": "string",
+          "defaultValue": "YYYY-MM-DD"
+        },
+        {
+          "name": "showOtherMonth",
+          "propType": "bool",
+          "description": "是否展示非本月的日期",
+          "defaultValue": true
+        },
+        {
+          "name": "defaultVisibleMonth",
+          "propType": "func",
+          "description": "默认展示的月份"
+        },
+        {
+          "name": "shape",
+          "propType": {
+            "type": "oneOf",
+            "value": [
+              "card",
+              "fullscreen",
+              "panel"
+            ]
+          },
+          "description": "展现形态",
+          "defaultValue": "fullscreen"
+        },
+        {
+          "name": "onSelect",
+          "propType": "func",
+          "description": "选择日期单元格时的回调\n@param {Object} value 对应的日期值 (moment 对象)"
+        },
+        {
+          "name": "onModeChange",
+          "propType": "func",
+          "description": "面板模式变化时的回调\n@param {String} mode 对应面板模式 date month year"
+        },
+        {
+          "name": "onVisibleMonthChange",
+          "propType": "func",
+          "description": "展现的月份变化时的回调\n@param {Object} value 显示的月份 (moment 对象)\n@param {String} reason 触发月份改变原因"
+        },
+        {
+          "name": "className",
+          "propType": "string",
+          "description": "自定义样式类"
+        },
+        {
+          "name": "dateCellRender",
+          "propType": "func",
+          "description": "自定义日期渲染函数\n@param {Object} value 日期值（moment对象）\n@returns {ReactNode}"
+        },
+        {
+          "name": "monthCellRender",
+          "propType": "func",
+          "description": "自定义月份渲染函数\n@param {Object} calendarDate 对应 Calendar 返回的自定义日期对象\n@returns {ReactNode}"
+        },
+        {
+          "name": "yearCellRender",
+          "propType": "func"
+        },
+        {
+          "name": "disabledDate",
+          "propType": "func",
+          "description": "不可选择的日期\n@param {Object} calendarDate 对应 Calendar 返回的自定义日期对象\n@param {String} view 当前视图类型，year: 年， month: 月, date: 日\n@returns {Boolean}"
+        },
+        {
+          "name": "locale",
+          "propType": "object",
+          "description": "国际化配置"
+        },
+        {
+          "name": "style",
+          "propType": "object"
+        }
+      ],
+      "configure": {
+        "props": [
+          {
+            "name": "shape",
+            "title": "展现形态",
+            "setter": {
+              "componentName": "RadioGroupSetter",
+              "props": {
+                "options": [
+                  "card",
+                  "fullscreen",
+                  "panel"
+                ]
+              }
+            }
+          },
+          {
+            "name": "showOtherMonth",
+            "display": "block",
+            "title": "展示非本月日期",
+            "setter": {
+              "componentName": "BoolSetter"
+            }
+          }
+        ]
+      },
+      "snippets": [
+        {
+          "screenshot": "https://img.alicdn.com/tfs/TB158yMu4v1gK0jSZFFXXb0sXXa-112-64.png",
+          "title": "卡片型",
+          "schema": {
+            "componentName": "Calendar",
+            "props": {
+              "shape": "card"
+            }
+          }
+        },
+        {
+          "screenshot": "https://img.alicdn.com/tfs/TB1PRmJu7P2gK0jSZPxXXacQpXa-112-64.png",
+          "title": "面板型",
+          "schema": {
+            "componentName": "Calendar",
+            "props": {
+              "shape": "panel"
+            }
+          }
+        },
+        {
+          "screenshot": "https://img.alicdn.com/tfs/TB10JuKu.T1gK0jSZFhXXaAtVXa-112-64.png",
+          "title": "全屏型",
+          "schema": {
+            "componentName": "Calendar",
+            "props": {
+              "shape": "fullscreen"
+            }
           }
         }
       ],
-      "reference": {
-        "package": "qrcode.react",
-        "version": "3.1.0",
-        "exportName": "default",
-        "subName": "",
-        "main": "lib/index.js",
+      "icon": "",
+      "category": "常用"
+    },
+    {
+      "componentName": "Loading",
+      "title": "加载",
+      "docUrl": "",
+      "screenshot": "",
+      "npm": {
+        "package": "@alifd/next",
+        "version": "1.23.x",
+        "exportName": "Loading",
+        "main": "",
         "destructuring": true,
-        "id": "qrcode.react"
-      }
+        "subName": ""
+      },
+      "props": [
+        {
+          "name": "tip",
+          "propType": "string",
+          "description": "自定义内容"
+        },
+        {
+          "name": "tipAlign",
+          "propType": {
+            "type": "oneOf",
+            "value": [
+              "right",
+              "bottom"
+            ]
+          },
+          "description": "自定义内容位置",
+          "defaultValue": "bottom"
+        },
+        {
+          "name": "visible",
+          "propType": "bool",
+          "description": "loading 状态, 默认 true",
+          "defaultValue": true
+        },
+        {
+          "name": "onVisibleChange",
+          "propType": "func"
+        },
+        {
+          "name": "className",
+          "propType": "string",
+          "description": "自定义class"
+        },
+        {
+          "name": "style",
+          "propType": "object",
+          "description": "自定义内联样式"
+        },
+        {
+          "name": "size",
+          "propType": {
+            "type": "oneOf",
+            "value": [
+              "large",
+              "medium"
+            ]
+          },
+          "description": "设置动画尺寸\n@description 仅仅对默认动画效果起作用\n@enumdesc 大号, 中号",
+          "defaultValue": "large"
+        },
+        {
+          "name": "color",
+          "propType": "string",
+          "description": "动画颜色"
+        },
+        {
+          "name": "fullScreen",
+          "propType": "bool",
+          "description": "全屏展示"
+        },
+        {
+          "name": "inline",
+          "title": "inline",
+          "propType": "bool",
+          "description": "should loader be displayed inline",
+          "defaultValue": true
+        }
+      ],
+      "configure": {
+        "component": {
+          "isContainer": true
+        },
+        "props": [
+          {
+            "name": "tip",
+            "title": {
+              "label": "自定义内容",
+              "tip": ""
+            },
+            "setter": {
+              "componentName": "MixedSetter",
+              "props": {
+                "setters": [
+                  "StringSetter",
+                  "ExpressionSetter"
+                ]
+              }
+            }
+          },
+          {
+            "name": "tipAlign",
+            "title": {
+              "label": "内容位置",
+              "tip": "自定义内容位置"
+            },
+            "setter": {
+              "componentName": "RadioGroupSetter",
+              "props": {
+                "options": [
+                  {
+                    "title": "动画右边",
+                    "value": "right"
+                  },
+                  {
+                    "title": "动画下面",
+                    "value": "bottom"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "name": "visible",
+            "title": {
+              "label": "是否显示"
+            },
+            "setter": {
+              "componentName": "MixedSetter",
+              "props": {
+                "setters": [
+                  "BoolSetter",
+                  "ExpressionSetter"
+                ]
+              }
+            }
+          },
+          {
+            "name": "size",
+            "title": {
+              "label": "动画尺寸"
+            },
+            "setter": {
+              "componentName": "RadioGroupSetter",
+              "props": {
+                "options": [
+                  {
+                    "title": "large",
+                    "value": "large"
+                  },
+                  {
+                    "title": "medium",
+                    "value": "medium"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "name": "color",
+            "title": "动画颜色",
+            "setter": {
+              "componentName": "ColorSetter"
+            }
+          },
+          {
+            "name": "fullScreen",
+            "title": "全屏显示",
+            "setter": "BoolSetter"
+          },
+          {
+            "name": "inline",
+            "title": "行内显示",
+            "setter": "BoolSetter"
+          }
+        ],
+        "supports": {
+          "style": true,
+          "events": [
+            "onVisibleChange"
+          ]
+        }
+      },
+      "snippets": [
+        {
+          "title": "加载",
+          "screenshot": "https://alifd.oss-cn-hangzhou.aliyuncs.com/fusion-cool/icons/icon-light/ic_light_loading.png",
+          "schema": {
+            "componentName": "Loading",
+            "props": {
+              "color": "red",
+              "prefix": "next-",
+              "tipAlign": "bottom",
+              "visible": true,
+              "size": "large",
+              "inline": true
+            }
+          }
+        }
+      ],
+      "icon": "",
+      "category": "反馈"
+    },
+    {
+      "componentName": "Progress",
+      "title": "进度指示器",
+      "docUrl": "",
+      "screenshot": "",
+      "npm": {
+        "package": "@alifd/next",
+        "version": "1.23.x",
+        "exportName": "Progress",
+        "main": "",
+        "destructuring": true,
+        "subName": ""
+      },
+      "props": [
+        {
+          "name": "prefix",
+          "propType": "string",
+          "defaultValue": "next-"
+        },
+        {
+          "name": "shape",
+          "propType": {
+            "type": "oneOf",
+            "value": [
+              "circle",
+              "line"
+            ]
+          },
+          "description": "形态",
+          "defaultValue": "line"
+        },
+        {
+          "name": "size",
+          "propType": {
+            "type": "oneOf",
+            "value": [
+              "small",
+              "medium",
+              "large"
+            ]
+          },
+          "description": "尺寸",
+          "defaultValue": "medium"
+        },
+        {
+          "name": "percent",
+          "title": "百分比",
+          "propType": "number",
+          "description": "所占百分比",
+          "defaultValue": 0
+        },
+        {
+          "name": "state",
+          "title": "进度状态",
+          "propType": {
+            "type": "oneOf",
+            "value": [
+              "normal",
+              "success",
+              "error"
+            ]
+          },
+          "description": "进度状态, 显示优先级: color > progressive > state",
+          "defaultValue": "normal"
+        },
+        {
+          "name": "progressive",
+          "title": {
+            "label": "色阶变化",
+            "tip": "是否为色彩阶段变化模式, 显示优先级: color > progressive > state"
+          },
+          "propType": "bool",
+          "description": "是否为色彩阶段变化模式, 显示优先级: color > progressive > state",
+          "defaultValue": false
+        },
+        {
+          "name": "hasBorder",
+          "title": "边框",
+          "propType": "bool",
+          "description": "是否添加 Border（只适用于 Line Progress)",
+          "defaultValue": false
+        },
+        {
+          "name": "textRender",
+          "title": {
+            "label": "文本渲染",
+            "tip": "文本渲染函数\n@param {Number} percent 当前的进度信息\n@param {Object} option 额外的参数\n@property {Boolean} option.rtl 是否在rtl 模式下渲染\n@return {ReactNode} 返回文本节点"
+          },
+          "propType": "func",
+          "description": "文本渲染函数\n@param {Number} percent 当前的进度信息\n@param {Object} option 额外的参数\n@property {Boolean} option.rtl 是否在rtl 模式下渲染\n@return {ReactNode} 返回文本节点"
+        },
+        {
+          "name": "color",
+          "propType": "string",
+          "description": "进度条颜色, 显示优先级: color > progressive > state"
+        },
+        {
+          "name": "backgroundColor",
+          "propType": "string",
+          "description": "背景色"
+        },
+        {
+          "name": "rtl",
+          "propType": "bool"
+        },
+        {
+          "name": "style",
+          "propType": "object"
+        }
+      ],
+      "configure": {
+        "props": {
+          "isExtends": true,
+          "override": [
+            {
+              "name": "rtl",
+              "condition": {
+                "type": "JSFunction",
+                "value": "() => false"
+              }
+            },
+            {
+              "name": "prefix",
+              "condition": {
+                "type": "JSFunction",
+                "value": "() => false"
+              }
+            },
+            {
+              "name": "color",
+              "title": {
+                "label": "进度条颜色",
+                "tip": "color|进度条颜色, 显示优先级: color > progressive > state"
+              },
+              "setter": {
+                "componentName": "ColorSetter"
+              }
+            },
+            {
+              "name": "backgroundColor",
+              "title": {
+                "label": "背景色",
+                "tip": "backgroundColor|背景色"
+              },
+              "setter": {
+                "componentName": "ColorSetter"
+              }
+            }
+          ]
+        }
+      },
+      "snippets": [
+        {
+          "title": "进度指示器",
+          "screenshot": "https://alifd.oss-cn-hangzhou.aliyuncs.com/fusion-cool/icons/icon-light/ic_light_progress.png",
+          "schema": {
+            "componentName": "Progress",
+            "props": {
+              "prefix": "next-",
+              "shape": "line",
+              "size": "medium",
+              "state": "normal",
+              "color": "blue",
+              "percent": 30
+            }
+          }
+        }
+      ],
+      "icon": "",
+      "category": "反馈"
+    },
+    {
+      "componentName": "Breadcrumb.Item",
+      "title": "面包屑 Item",
+      "docUrl": "",
+      "screenshot": "",
+      "npm": {
+        "package": "@alifd/next",
+        "version": "1.23.x",
+        "exportName": "Breadcrumb",
+        "main": "",
+        "destructuring": true,
+        "subName": "Item"
+      },
+      "props": [
+        {
+          "name": "prefix",
+          "propType": "string",
+          "defaultValue": "next-"
+        },
+        {
+          "name": "rtl",
+          "propType": "bool"
+        },
+        {
+          "name": "children",
+          "description": "内容",
+          "propType": "string"
+        },
+        {
+          "name": "link",
+          "propType": "string",
+          "description": "面包屑节点链接，如果设置这个属性，则该节点为`<a />` ，否则是`<span />`"
+        },
+        {
+          "name": "activated",
+          "propType": "bool"
+        },
+        {
+          "name": "separator",
+          "propType": {
+            "type": "instanceOf",
+            "value": "node"
+          }
+        },
+        {
+          "name": "className",
+          "propType": "any"
+        },
+        {
+          "name": "style",
+          "propType": "object"
+        }
+      ],
+      "configure": {
+        "props": [
+          {
+            "name": "children",
+            "title": "文本内容",
+            "setter": "StringSetter"
+          }
+        ]
+      },
+      "icon": "",
+      "category": "导航"
+    },
+    {
+      "componentName": "Breadcrumb",
+      "title": "面包屑",
+      "docUrl": "",
+      "screenshot": "",
+      "npm": {
+        "package": "@alifd/next",
+        "version": "1.23.x",
+        "exportName": "Breadcrumb",
+        "main": "",
+        "destructuring": true,
+        "subName": ""
+      },
+      "props": [
+        {
+          "name": "prefix",
+          "propType": "string",
+          "description": "样式类名的品牌前缀",
+          "defaultValue": "next-"
+        },
+        {
+          "name": "rtl",
+          "propType": "bool"
+        },
+        {
+          "name": "children",
+          "propType": {
+            "type": "instanceOf",
+            "value": "node"
+          },
+          "description": "面包屑子节点，需传入 Breadcrumb.Item"
+        },
+        {
+          "name": "maxNode",
+          "propType": {
+            "type": "oneOfType",
+            "value": [
+              "number",
+              {
+                "type": "oneOf",
+                "value": [
+                  "auto"
+                ]
+              }
+            ]
+          },
+          "description": "面包屑最多显示个数，超出部分会被隐藏, 设置为 auto 会自动根据父元素的宽度适配。",
+          "defaultValue": 100
+        },
+        {
+          "name": "separator",
+          "propType": {
+            "type": "instanceOf",
+            "value": "node"
+          },
+          "description": "分隔符，可以是文本或 Icon"
+        },
+        {
+          "name": "component",
+          "propType": {
+            "type": "oneOfType",
+            "value": [
+              "string",
+              "func"
+            ]
+          },
+          "description": "设置标签类型",
+          "defaultValue": "nav"
+        },
+        {
+          "name": "className",
+          "propType": "any"
+        },
+        {
+          "name": "style",
+          "propType": "object"
+        }
+      ],
+      "configure": {
+        "component": {
+          "isContainer": true,
+          "nestingRule": {
+            "childWhitelist": [
+              "Breadcrumb.Item"
+            ]
+          }
+        },
+        "props": [
+          {
+            "name": "maxNode",
+            "title": {
+              "label": "最大节点数",
+              "tip": "默认 100"
+            },
+            "setter": "NumberSetter"
+          },
+          {
+            "name": "separator",
+            "title": "分隔符",
+            "setter": "StringSetter"
+          },
+          {
+            "name": "Breadcrumb.Item",
+            "title": "面包屑项",
+            "setter": {
+              "componentName": "ArraySetter",
+              "props": {
+                "itemSetter": {
+                  "componentName": "ObjectSetter",
+                  "props": {
+                    "config": {
+                      "items": [
+                        {
+                          "name": "primaryKey",
+                          "title": "面包屑项编号",
+                          "condition": {
+                            "type": "JSFunction",
+                            "value": "() => false"
+                          },
+                          "initialValue": {
+                            "type": "JSFunction",
+                            "value": "val => {\n                        if (val) return val;\n                        return String(Math.floor(Math.random() * 10000));\n                      }"
+                          },
+                          "setter": "StringSetter"
+                        },
+                        {
+                          "name": "children",
+                          "title": "标题",
+                          "initialValue": {
+                            "zh_CN": "",
+                            "en_US": "",
+                            "type": "i18n"
+                          },
+                          "setter": "StringSetter"
+                        },
+                        {
+                          "name": "link",
+                          "title": "链接",
+                          "initialValue": {
+                            "zh_CN": "",
+                            "en_US": "",
+                            "type": "i18n"
+                          },
+                          "setter": "StringSetter"
+                        },
+                        {
+                          "name": "target",
+                          "title": "打开方式",
+                          "initialValue": {
+                            "zh_CN": "",
+                            "en_US": "",
+                            "type": "i18n"
+                          },
+                          "setter": {
+                            "componentName": "RadioGroupSetter",
+                            "initialValue": "_self",
+                            "props": {
+                              "options": [
+                                {
+                                  "title": "新开页面",
+                                  "value": "_blank"
+                                },
+                                {
+                                  "title": "当前页面",
+                                  "value": "_self"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "initialValue": {
+                    "type": "JSFunction",
+                    "value": "() => {\n                return {\n                  primaryKey: String(Math.floor(Math.random() * 10000)),\n                  children: \"Title\",\n                  target: \"_self\"\n                };\n              }"
+                  }
+                }
+              }
+            },
+            "extraProps": {
+              "virtual": {
+                "type": "JSFunction",
+                "value": "() => true"
+              },
+              "getValue": {
+                "type": "JSFunction",
+                "value": "(target, value) => {\n            console.log(\"getValue: \", target, value);\n            return target.getNode().children.map(child => {\n              return {\n                primaryKey: String(child.getPropValue(\"primaryKey\")),\n                children: child.getPropValue(\"children\"),\n                link: child.getPropValue(\"link\"),\n                target: child.getPropValue(\"target\")\n              };\n            });\n          }"
+              },
+              "setValue": {
+                "type": "JSFunction",
+                "value": "(target, value) => {\n            console.log(\"setValue: \", target, value);\n            const node = target.getNode();\n            const map = {};\n            if (!Array.isArray(value)) {\n              value = [];\n            }\n            value.forEach(item => {\n              const BreadcrumbItem = Object.assign({}, item);\n              map[item.primaryKey] = BreadcrumbItem;\n            });\n            node.children.mergeChildren(\n              child => {\n                const primaryKey = String(child.getPropValue(\"primaryKey\"));\n                console.log(child.id + \"----\" + primaryKey);\n                if (Object.hasOwnProperty.call(map, primaryKey)) {\n                  child.setPropValue(\"children\", map[primaryKey].children);\n                  child.setPropValue(\"link\", map[primaryKey].link);\n                  child.setPropValue(\"target\", map[primaryKey].target);\n                  delete map[primaryKey];\n                  return false;\n                }\n                return true;\n              },\n              () => {\n                const items = [];\n                for (const primaryKey in map) {\n                  if (Object.hasOwnProperty.call(map, primaryKey)) {\n                    items.push({\n                      componentName: \"Breadcrumb.Item\",\n                      props: map[primaryKey]\n                    });\n                  }\n                }\n                console.log(\"adder: \", items);\n                return items;\n              },\n              (child1, child2) => {\n                const a = value.findIndex(\n                  item =>\n                    String(item.primaryKey) ===\n                    String(child1.getPropValue(\"primaryKey\"))\n                );\n                const b = value.findIndex(\n                  item =>\n                    String(item.primaryKey) ===\n                    String(child2.getPropValue(\"primaryKey\"))\n                );\n                console.log(\"a: \", a);\n                console.log(\"b: \", b);\n                return a - b;\n              }\n            );\n          }"
+              },
+              "onChange": {
+                "type": "JSFunction",
+                "value": "() => {\n            console.log(\"onChange: \", arguments);\n          }"
+              }
+            }
+          }
+        ],
+        "supports": {
+          "style": true
+        }
+      },
+      "snippets": [
+        {
+          "title": "面包屑",
+          "screenshot": "https://alifd.oss-cn-hangzhou.aliyuncs.com/fusion-cool/icons/icon-light/ic_light_breadcrumb.png",
+          "schema": {
+            "componentName": "Breadcrumb",
+            "props": {
+              "maxNode": 100,
+              "component": "nav"
+            },
+            "children": [
+              {
+                "componentName": "Breadcrumb.Item",
+                "props": {
+                  "children": "一级",
+                  "primaryKey": "breadcrumb-item-1",
+                  "target": "_self"
+                }
+              },
+              {
+                "componentName": "Breadcrumb.Item",
+                "props": {
+                  "children": "二级",
+                  "primaryKey": "breadcrumb-item-2",
+                  "target": "_self"
+                }
+              },
+              {
+                "componentName": "Breadcrumb.Item",
+                "props": {
+                  "children": "三级",
+                  "primaryKey": "breadcrumb-item-3",
+                  "target": "_self"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "icon": "",
+      "category": "导航"
+    },
+    {
+      "title": "饼图",
+      "category": "图表",
+      "componentName": "PieChart",
+      "icon": "https://unpkg.alibaba-inc.com/@ali/vc-bizcharts@1.1.4/src/vc-PieChart/logo.svg",
+      "npm": {
+        "package": "bizcharts",
+        "version": "4.0.14",
+        "exportName": "PieChart",
+        "main": "",
+        "destructuring": true,
+        "subName": ""
+      },
+      "configure": {
+        "props": [
+          {
+            "name": "angleField",
+            "title": "占比字段",
+            "tip": "扇形切片大小（弧度）所对应的数据字段名",
+            "setter": "StringSetter"
+          },
+          {
+            "name": "colorField",
+            "title": "颜色字段",
+            "tip": "扇形颜色映射对应的数据字段名",
+            "setter": "StringSetter"
+          },
+          {
+            "name": "titleConfig",
+            "title": "标题配置",
+            "display": "block",
+            "type": "group",
+            "items": [
+              {
+                "name": "title.text",
+                "title": "标题",
+                "setter": "StringSetter"
+              },
+              {
+                "name": "title.visible",
+                "title": "是否展示",
+                "setter": "BoolSetter"
+              }
+            ]
+          },
+          {
+            "name": "descriptionConfig",
+            "title": "描述配置",
+            "display": "block",
+            "type": "group",
+            "items": [
+              {
+                "name": "description.text",
+                "title": "描述",
+                "setter": "StringSetter"
+              },
+              {
+                "name": "description.visible",
+                "title": "是否展示",
+                "setter": "BoolSetter"
+              }
+            ]
+          },
+          {
+            "name": "data",
+            "title": "图表数据",
+            "tip": "配置图表数据",
+            "setter": "JsonSetter"
+          }
+        ],
+        "supports": {
+          "style": true
+        }
+      },
+      "snippets": [
+        {
+          "title": "饼图",
+          "componentName": "PieChart",
+          "screenshot": "https://gw.alipayobjects.com/mdn/rms_d314dd/afts/img/A*93XzToUe1OQAAAAAAAAAAABkARQnAQ",
+          "schema": {
+            "title": "饼图",
+            "componentName": "PieChart",
+            "props": {
+              "isMaterial": true,
+              "title": {
+                "visible": true,
+                "text": "基础饼图"
+              },
+              "description": {
+                "visible": true,
+                "text": "基础饼图描述"
+              },
+              "meta": {
+                "type": {
+                  "alias": "类别"
+                },
+                "sales": {
+                  "alias": "销售额(万)"
+                }
+              },
+              "angleField": "value",
+              "colorField": "type",
+              "data": [
+                {
+                  "type": "分类一",
+                  "value": 27
+                },
+                {
+                  "type": "分类二",
+                  "value": 25
+                },
+                {
+                  "type": "分类三",
+                  "value": 18
+                },
+                {
+                  "type": "分类四",
+                  "value": 15
+                },
+                {
+                  "type": "分类五",
+                  "value": 10
+                },
+                {
+                  "type": "其它",
+                  "value": 5
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "折线图",
+      "category": "图表",
+      "componentName": "LineChart",
+      "icon": "https://unpkg.alibaba-inc.com/@ali/vc-bizcharts@1.1.4/src/vc-line/logo.svg",
+      "npm": {
+        "package": "bizcharts",
+        "version": "4.0.14",
+        "exportName": "LineChart",
+        "main": "",
+        "destructuring": true,
+        "subName": ""
+      },
+      "configure": {
+        "props": [
+          {
+            "name": "title",
+            "title": "标题",
+            "display": "inline",
+            "setter": "StringSetter",
+            "defaultValue": "折线图标题",
+            "tip": "标题文本",
+            "supportVariable": true
+          },
+          {
+            "name": "description",
+            "title": "描述",
+            "display": "inline",
+            "setter": "StringSetter",
+            "defaultValue": "折线图描述",
+            "tip": "描述文本",
+            "supportVariable": true
+          },
+          {
+            "name": "xField",
+            "title": "横坐标",
+            "display": "inline",
+            "setter": "StringSetter",
+            "defaultValue": "year",
+            "tip": "标题文本",
+            "supportVariable": true
+          },
+          {
+            "name": "yField",
+            "title": "纵坐标",
+            "display": "inline",
+            "setter": "StringSetter",
+            "defaultValue": "value",
+            "tip": "描述文本",
+            "supportVariable": true
+          },
+          {
+            "name": "data",
+            "title": "图表数据",
+            "tip": "配置图表数据",
+            "setter": "JsonSetter"
+          }
+        ],
+        "supports": {
+          "style": true
+        }
+      },
+      "snippets": [
+        {
+          "title": "折线图",
+          "componentName": "LineChart",
+          "screenshot": "https://gw.alipayobjects.com/mdn/rms_d314dd/afts/img/A*YMGnQoh_jSAAAAAAAAAAAABkARQnAQ",
+          "schema": {
+            "title": "折线图",
+            "componentName": "LineChart",
+            "props": {
+              "title": "折线图标题",
+              "isMaterial": true,
+              "description": "折线图描述",
+              "xField": "year",
+              "yField": "value",
+              "renderer": "svg",
+              "data": [
+                {
+                  "year": "1991",
+                  "value": 3
+                },
+                {
+                  "year": "1992",
+                  "value": 4
+                },
+                {
+                  "year": "1993",
+                  "value": 3.5
+                },
+                {
+                  "year": "1994",
+                  "value": 5
+                },
+                {
+                  "year": "1995",
+                  "value": 4.9
+                },
+                {
+                  "year": "1996",
+                  "value": 6
+                },
+                {
+                  "year": "1997",
+                  "value": 7
+                },
+                {
+                  "year": "1998",
+                  "value": 9
+                },
+                {
+                  "year": "1999",
+                  "value": 13
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "水位图",
+      "category": "图表",
+      "componentName": "LiquidChart",
+      "icon": "https://unpkg.alibaba-inc.com/@ali/vc-bizcharts@1.1.4/src/vc-LiquidChart/logo.svg",
+      "npm": {
+        "package": "bizcharts",
+        "version": "4.0.14",
+        "exportName": "LiquidChart",
+        "main": "",
+        "destructuring": true,
+        "subName": ""
+      },
+      "configure": {
+        "props": [
+          {
+            "name": "title",
+            "title": "标题",
+            "display": "inline",
+            "setter": "StringSetter",
+            "defaultValue": "水位图标题",
+            "tip": "标题文本",
+            "supportVariable": true
+          },
+          {
+            "name": "description",
+            "title": "描述",
+            "display": "inline",
+            "setter": "StringSetter",
+            "defaultValue": "水位图描述",
+            "tip": "描述文本",
+            "supportVariable": true
+          },
+          {
+            "name": "dataSource",
+            "title": "图表数据",
+            "type": "group",
+            "display": "block",
+            "tip": "配置图表数据",
+            "items": [
+              {
+                "name": "min",
+                "title": "最小值",
+                "setter": "NumberSetter"
+              },
+              {
+                "name": "max",
+                "title": "最大值",
+                "setter": "NumberSetter"
+              },
+              {
+                "name": "value",
+                "title": "值",
+                "setter": "NumberSetter"
+              }
+            ]
+          }
+        ],
+        "supports": {
+          "style": true
+        }
+      },
+      "snippets": [
+        {
+          "title": "水位图",
+          "screenshot": "https://gw.alipayobjects.com/mdn/rms_d314dd/afts/img/A*DKvMTrrWdAQAAAAAAAAAAABkARQnAQ",
+          "schema": {
+            "title": "水位图",
+            "category": "常用图表(试验)",
+            "componentName": "LiquidChart",
+            "props": {
+              "title": "水位图标题",
+              "description": "水位图描述",
+              "isMaterial": true,
+              "outline": {
+                "border": 2,
+                "distance": 6
+              },
+              "min": 0,
+              "max": 100,
+              "value": 49
+            }
+          }
+        }
+      ]
     }
   ],
   "sort": {

@@ -33,9 +33,11 @@ import {
   preview,
   getProjectSchemaFromLocalStorage,
 } from '../../universal/utils';
-import assets from './assets.json';
-// import assets from './customer-assets.json';
+// import assets from './assets.json';
+import assets from './customer-assets.json';
 import schema from './schema.json';
+
+console.log(11, assets)
 
 export default async function registerPlugins() {
   await plugins.register(ManualPlugin);
