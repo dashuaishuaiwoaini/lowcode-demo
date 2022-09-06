@@ -74,59 +74,52 @@
     },
     {
       "package": "lodash",
+      "library": "_",
+      "urls": [
+        "https://g.alicdn.com/platform/c/lodash/4.6.1/lodash.min.js"
+      ]
+    },
+    {
+      "package": "lodash",
+      "id": "lodash",
+      "library": "_",
       "urls": [
         "https://g.alicdn.com/platform/c/lodash/4.6.1/lodash.min.js"
       ],
-      "library": "lodash"
+      "external": true
     },
     {
-      "title": "fusion组件库",
+      "package": "moment",
+      "id": "moment",
+      "library": "moment",
+      "urls": [
+        "https://g.alicdn.com/mylib/moment/2.24.0/min/moment.min.js"
+      ],
+      "external": true
+    },
+    {
       "package": "@alifd/next",
-      "version": "1.23.0",
+      "id": "@alifd/next",
+      "library": "Next",
       "urls": [
-        "https://g.alicdn.com/code/lib/alifd__next/1.23.18/next.min.css",
-        "https://g.alicdn.com/code/lib/alifd__next/1.23.18/next-with-locales.min.js"
+        "https://g.alicdn.com/code/lib/alifd__next/1.24.18/next.min.css",
+        "https://g.alicdn.com/code/lib/alifd__next/1.24.18/next-with-locales.min.js"
       ],
-      "library": "Next"
+      "external": true
     },
     {
-      "title": "NextTable",
-      "package": "NextTable",
-      "version": "1.0.1",
+      "id": "react-color",
+      "package": "react-color",
+      "library": "ReactColor",
+      "version": "2.19.3",
+      "advancedUrls": {
+        "default": [
+          "https://g.alicdn.com/legao-comp/web_bundle_0724/react-color/2.19.3/main.a0da931.js"
+        ]
+      },
       "urls": [
-        "https://g.alicdn.com/fusion-platform/pro-table/1.0.1/next-table.js",
-        "https://g.alicdn.com/fusion-platform/pro-table/1.0.1/next-table.css"
-      ],
-      "library": "NextTable"
-    },
-    {
-      "title": "AliLowCodeComponents",
-      "package": "@alifd/ali-lowcode-components",
-      "version": "latest",
-      "urls": [
-        "https://gw.alipayobjects.com/os/lib/alifd/ali-lowcode-components/0.1.4/dist/ali-lowcode-components.js",
-        "https://gw.alipayobjects.com/os/lib/alifd/ali-lowcode-components/0.1.4/dist/ali-lowcode-components.css"
-      ],
-      "library": "AliLowCodeComponents"
-    },
-    {
-      "title": "BizCharts",
-      "package": "bizcharts",
-      "version": "4.1.11",
-      "urls": [
-        "https://g.alicdn.com/code/lib/bizcharts/4.1.11/BizCharts.min.js"
-      ],
-      "library": "BizCharts"
-    },
-    {
-      "title": "Container",
-      "package": "@alife/container",
-      "version": "0.3.7",
-      "urls": [
-        "https://g.alicdn.com/fusion-design/auto-layout/0.3.7/dist/container.css",
-        "https://g.alicdn.com/fusion-design/auto-layout/0.3.7/dist/container.js"
-      ],
-      "library": "Container"
+        "https://g.alicdn.com/legao-comp/web_bundle_0724/react-color/2.19.3/main.a0da931.js"
+      ]
     }
   ],
   "components": [
@@ -1600,6 +1593,52 @@
           }
         }
       ]
+    },
+    {
+      "componentId": "7wzsuq95u0c0",
+      "devMode": "procode",
+      "npm": {
+        "package": "react-color",
+        "version": "2.19.3",
+        "exportName": "default",
+        "subName": "",
+        "main": "lib/index.js",
+        "destructuring": true
+      },
+      "componentName": "ReactColor",
+      "title": "react-color",
+      "category": "其他",
+      "configure": {
+        "props": [],
+        "component": {
+          "isContainer": false,
+          "isModal": false
+        },
+        "supports": {
+          "style": false
+        }
+      },
+      "experimental": {
+        "callbacks": {}
+      },
+      "snippets": [
+        {
+          "title": "react-color",
+          "schema": {
+            "componentName": "ReactColor",
+            "props": {}
+          }
+        }
+      ],
+      "reference": {
+        "package": "react-color",
+        "version": "2.19.3",
+        "exportName": "default",
+        "subName": "",
+        "main": "lib/index.js",
+        "destructuring": true,
+        "id": "react-color"
+      }
     }
   ],
   "sort": {
