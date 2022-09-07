@@ -34,7 +34,6 @@ import {
   preview,
 } from './utils';
 import assets from './assets.json'
-// import assets from '../scenarios/basic-fusion/customer-assets.json';
 import { registerRefProp } from 'src/sample-plugins/set-ref-prop';
 
 export default async function registerPlugins() {
